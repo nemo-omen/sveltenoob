@@ -56,11 +56,9 @@
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Okay, you're more or less set up to start.</h1>
 
 <figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
+	<img alt='The Journey, Page 1' src='TheJourney.jpg'>
+	<figcaption>Drowning?</figcaption>
 </figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>

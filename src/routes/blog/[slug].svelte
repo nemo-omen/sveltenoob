@@ -63,6 +63,9 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
+	footer {
+		width: 100%;
+	}
 </style>
 
 <svelte:head>
@@ -74,3 +77,7 @@
 <div class='content'>
 	{@html post.html}
 </div>
+
+<footer>
+<p>##########</p>
+</footer>

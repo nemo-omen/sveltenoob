@@ -13,24 +13,30 @@
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		justify-content: space-around;
+	}
+	.blog-preview {
+		display: grid;
+		border-radius: 5px;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>SvelteNoob - Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
 
-<ul>
+<div class="blog-grid">
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
+		<div class="blog-preview"><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></div>
 	{/each}
-</ul>
+</div>
