@@ -1,5 +1,6 @@
-//Adding comments so I can commit a new export
 <script context="module">
+//You can find instructions at spiffy.tech/blog/setting-up-sapper-with-netlify-cms/
+
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte

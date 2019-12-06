@@ -1,4 +1,4 @@
-//You can find instructions at spiffy.texh/blob/setting-up-sapper-with-netlify-cms/
+//You can find instructions at spiffy.tech/blog/setting-up-sapper-with-netlify-cms/
 import fm from "front-matter";
 import glob from "glob";
 import { fs } from "mz";

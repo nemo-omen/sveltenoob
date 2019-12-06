@@ -1,5 +1,5 @@
-//More comments so this will export something new and I can commit again ... I hope
 <script>
+//You can find instructions at spiffy.tech/blog/setting-up-sapper-with-netlify-cms/
 
   import { onMount } from 'svelte';
 

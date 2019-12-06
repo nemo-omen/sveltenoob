@@ -1,4 +1,6 @@
 <script context="module">
+//You can find instructions at spiffy.tech/blog/setting-up-sapper-with-netlify-cms/
+
 	export function preload({ params, query }) {
 		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
 			return { posts };
