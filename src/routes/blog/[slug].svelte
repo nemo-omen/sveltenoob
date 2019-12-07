@@ -29,6 +29,24 @@
   };
 </script>
 
+
+
+<svelte:head>
+	<title>{post.title}</title>
+</svelte:head>
+<header>
+	<img src="{post.thumbnail}" alt="{post.title}">
+</header>
+<h1>{post.title}</h1>
+
+<div class='content'>
+	{@html post.html}
+</div>
+
+<footer>
+<p>##########</p>
+</footer>
+
 <style>
 	/*
 		By default, CSS is locally scoped to the component,
@@ -38,6 +56,17 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
+	header {
+		display: grid;
+		align-content: center;
+		width: 100%;
+		height: 30em;
+		overflow: hidden;
+		margin: 0 0 1em 0;
+	}
+	header img {
+		width: 100%;
+	}
 	.content :global(h2) {
 		font-size: 1.4em;
 		font-weight: 500;
@@ -67,17 +96,3 @@
 		width: 100%;
 	}
 </style>
-
-<svelte:head>
-	<title>{post.title}</title>
-</svelte:head>
-
-<h1>{post.title}</h1>
-
-<div class='content'>
-	{@html post.html}
-</div>
-
-<footer>
-<p>##########</p>
-</footer>
