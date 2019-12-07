@@ -56,8 +56,6 @@
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
-<h1>Okay, you're more or less set up to start.</h1>
-
 <figure>
 	<img alt='The Journey, Page 1' src='TheJourney.jpg'>
 	<figcaption>Drowning?</figcaption>

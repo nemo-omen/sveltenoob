@@ -33,7 +33,7 @@
 				<a rel='prefetch' href='blog/{post.slug}'><h3>{post.title}</h3></a>
 			</article>
 			<footer>
-				<p>Here's some filler text for styling.</p>
+				<p>{post.description}</p>
 			</footer>
 		</div>
 	{/each}

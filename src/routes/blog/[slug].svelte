@@ -43,10 +43,6 @@
 	{@html post.html}
 </div>
 
-<footer>
-<p>##########</p>
-</footer>
-
 <style>
 	/*
 		By default, CSS is locally scoped to the component,
