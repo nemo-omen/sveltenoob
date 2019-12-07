@@ -43,7 +43,7 @@
 	.blog-grid {
 		display: grid;
 		width: 100%;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 2rem;
 		justify-content: stretch;
 	}
@@ -75,6 +75,7 @@
 	.img-preview {
 		display: grid;
 		align-content: center;
+		justify-content: center;
 		height: 20rem;
 		overflow: hidden;
 		margin: 0;
