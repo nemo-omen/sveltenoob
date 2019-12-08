@@ -9,7 +9,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1.2;
 }
 
@@ -19,10 +19,5 @@ h1 {
 
 a {
 	color: inherit;
-}
-
-@media (min-width: 400px) {
-	body {
-		font-size: 1rem;
-	}
+	padding: 0;
 }
