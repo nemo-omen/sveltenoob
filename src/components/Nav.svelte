@@ -2,42 +2,63 @@
 	export let segment;
 </script>
 
+<nav>
+	<!-- <ul>
+		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>
+		<li><a class:selected='{segment === "about"}' href='about'>about</a></li> -->
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<!-- <li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
+	</ul> -->
+
+	<div class="nav-menu">
+		<div class="nav-logo">
+			<a href='.'><img src="images/logo.svg" alt="SvelteNoob"></a>
+		</div>
+		<div class="nav-item">
+			<a class:selected={segment === undefined} href=".">HOME</a>
+		</div>
+		<div class="nav-item">
+			<a class:selected={segment === 'about'} href="about">ABOUT</a>
+		</div>
+		<div class="nav-item">
+			<a class:selected={segment === 'blog'} href="blog">BLOG</a>
+		</div>
+	</div>
+</nav>
+
 <style>
 	nav {
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 1rem 2rem;
+		display: grid;
+		justify-content: start;
+		align-content: end;
+	}
+	.nav-logo {
+		display: grid;
+		justify-content: start;
+		align-content: center;
+		height: 60px;
+		margin: 0 2rem 0 0;
 	}
 
-	ul {
-		margin: 0;
-		padding: 0;
+.nav-logo img {
+	height: 60px;
+}
+	.nav-menu {
+		display: grid;
+		width: 100%;
+		justify-content: space-between;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
 
 	.selected {
 		position: relative;
 		display: inline-block;
-	}
-
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
+		color: #ff3e00;
 	}
 
 	a {
@@ -46,14 +67,3 @@
 		display: block;
 	}
 </style>
-
-<nav>
-	<ul>
-		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>
-		<li><a class:selected='{segment === "about"}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
-	</ul>
-</nav>
