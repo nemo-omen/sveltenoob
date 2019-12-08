@@ -17,6 +17,7 @@
 <!-- Markup -->
 <svelte:head>
 	<title>SvelteNoob - Blog</title>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
 

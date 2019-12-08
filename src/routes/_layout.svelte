@@ -16,7 +16,7 @@
 	main {
 		background-color: #202020;
 		padding: 0 2rem;
-		margin: 0;
+		margin: 8rem 0;
 		display: grid;
 		align-content: start;
 		justify-content: stretch;
