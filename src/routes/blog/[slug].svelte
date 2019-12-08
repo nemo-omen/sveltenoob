@@ -47,17 +47,71 @@
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
-<header>
-	<img src="{post.thumbnail}" alt="{post.title}">
-</header>
-<h1>{post.title}</h1>
-<p>{post.date}</p>
+<div class="blog-main">
+	<div class="blog-header" style="background-image: url({post.thumbnail})">
+		<h1>{post.title}</h1>
+	</div>
 
-<div class='content'>
-	{@html post.html}
+
+	<div class='content'>
+		<p class="post-date">{post.date}</p>
+		{@html post.html}
+	</div>
 </div>
 
 <style>
+.blog-main {
+
+	align-content: start;
+}
+.blog-header {
+
+	display: grid;
+	align-content: end;
+	justify-content: stretch;
+	text-align: start;
+	margin: 0;
+	height: 30vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.blog-header h1 {
+	font-size: 2rem;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 1rem;
+}
+@media (min-width:800px) {
+	.content {
+		width: 80%;
+		padding: 1rem;
+	}
+}
+@media (max-width: 800px) {
+	.blog-header {
+		height: 20vh;
+	}
+	.content {
+		width: 100%;
+		padding: 0;
+	}
+}
+@media (max-width: 500px) {
+	.blog-header {
+		height: 10vh;
+	}
+	.blog-header h1 {
+		font-size: 1.5rem;
+	}
+}
+.post-date {
+	font-style: italic;
+	color: #f8f8f8;
+	border-bottom: 1px dotted #f8f8f8;
+	padding: 0 0 1rem 0;
+}
 	/*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
@@ -66,23 +120,24 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
-	header {
-		display: grid;
-		align-content: center;
-		width: 100%;
-		height: 30em;
-		overflow: hidden;
-		margin: 0 0 1em 0;
-	}
-	header img {
-		width: 100%;
-	}
 	.content :global(code){
 	font-family: 'IMB Plex Mono', menlo, inconsolata, monospace;
+	white-space: pre-wrap;
+	background-color: #2d2d2d;
 	}
 	.content :global(pre) {
 		border-radius: 5px;
-		margin: 0 1rem;
+		padding: 1rem;
+		white-space: pre-wrap;
+		max-width: 80%;
+		background-color: #2d2d2d;
 	}
-
+@media (max-width: 500px) {
+	.content :global(code) {
+		max-width: 100%;
+	}
+	.content :global(pre) {
+		max-width: 100%;
+	}
+}
 	</style>

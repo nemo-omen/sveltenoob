@@ -14,10 +14,11 @@
 
 <style>
 	main {
-		position: relative;
 		background-color: #202020;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
+		padding: 0 2rem;
+		margin: 0;
+		display: grid;
+		align-content: start;
+		justify-content: stretch;
 	}
 </style>
