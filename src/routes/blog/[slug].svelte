@@ -99,11 +99,9 @@
 	}
 }
 @media (max-width: 500px) {
-	.blog-header {
-		height: 15vh;
-	}
 	.blog-header h1 {
 		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
 	}
 }
 .post-date {
