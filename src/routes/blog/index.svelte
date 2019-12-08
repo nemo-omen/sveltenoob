@@ -27,11 +27,9 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
 		<div class="blog-preview" style="background-image: url({post.thumbnail})">
-		<a class="div-link" href="blog/{post.slug}">
-		</a>
-			<!-- <div class="img-preview">
+			<div class="img-preview">
 				<a rel='prefetch' href='blog/{post.slug}'><img src="{post.thumbnail}" alt="{post.slug}"></a>
-			</div> -->
+			</div>
 			<div class="blog-preview-content">
 				<article>
 					<a rel='prefetch' href='blog/{post.slug}'><h3>{post.title}</h3></a>
@@ -48,36 +46,27 @@
 	.blog-grid {
 		display: grid;
 		width: 100%;
-		grid-template-columns: repeat(2, minmax(300px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 2rem;
 		justify-content: stretch;
 	}
 	.blog-preview {
 		display: grid;
 		justify-content: stretch;
-		align-content: end;
+		align-content: stretch;
 		/* border-radius: 5px; */
 		box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
 		padding: 0;
 		overflow: hidden;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
 		height: 20rem;
 		border-radius: 5px;
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 	.blog-preview-content {
 		background-color: rgba(0, 0, 0, 0.3);
-	}
-	.div-link {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
-		z-index: 20;
-		opacity: 0;
+		z-index: 10;
 	}
 
 	.blog-preview article {
@@ -102,14 +91,31 @@
 	}
 	.img-preview {
 		display: grid;
-		align-content: center;
-		justify-content: center;
-		height: 10rem;
+		align-content: start;
+		justify-content: stretch;
+		width: 100%;
+		/* z-index: 5; */
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
 	}
 	.img-preview img {
 		width: 100%;
+		margin: 0;
+		padding: 0;
+		opacity: 0;
 	}
+@media (max-width: 800px) {
+	.blog-grid {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+@media (max-width: 350px) {
+	.img-preview {
+		opacity: 0;
+	}
+	.img-preview img {
+		opacity: 0;
+	}
+}
 </style>
