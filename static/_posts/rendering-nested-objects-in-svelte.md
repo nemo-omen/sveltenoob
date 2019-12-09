@@ -5,7 +5,7 @@ date: Sunday, December 8, 2019
 description: It's really, really easy to render nested objects in Svelte.
 thumbnail: /uploads/sodapopinski.jpg
 ---
-*** This post originally appeared on [dev.to](https://dev.to/trainingmontage/rendering-nested-objects-in-svelte-9mh)
+_This post originally appeared on [dev.to](https://dev.to/trainingmontage/rendering-nested-objects-in-svelte-9mh)_
 
 Hi.
 
@@ -71,7 +71,7 @@ Now let's pretend we're training an up-and-coming fighter and they need a list o
 
 And you basically get exactly what you need.
 
-![Some Real Jabronis](https://thepracticaldev.s3.amazonaws.com/i/gszw0x1wr9l9vguygnzj.png)
+![Some Real Jabronis](/images/nesting-example.jpg)
 
 You can also, if you want to use components in these iterations (and you know you do,) pass each of these iteration levels into your component through props:
 

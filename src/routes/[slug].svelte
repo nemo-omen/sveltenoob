@@ -61,11 +61,12 @@
 
 <style>
 .blog-main {
-
+	display: grid;
 	align-content: start;
+	justify-content: center;
+	justify-self: center;
 }
 .blog-header {
-
 	display: grid;
 	align-content: end;
 	justify-content: stretch;
@@ -75,7 +76,7 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
+	background-attachment: fixed;
 }
 .blog-header h1 {
 	font-size: 2rem;
@@ -92,9 +93,11 @@
 @media (max-width: 800px) {
 	.blog-header {
 		height: 20vh;
+		background-size: contain;
 	}
+
 	.content {
-		width: 100%;
+		max-width: 100%;
 		padding: 0;
 	}
 }
@@ -103,6 +106,7 @@
 		font-size: 1.5rem;
 		padding: 0.5rem 1rem;
 	}
+
 }
 .post-date {
 	font-style: italic;
@@ -122,6 +126,8 @@
 	font-family: 'IMB Plex Mono', menlo, inconsolata, monospace;
 	white-space: pre-wrap;
 	background-color: #2d2d2d;
+	max-width: 80%;
+
 	}
 	.content :global(pre) {
 		border-radius: 5px;
@@ -136,6 +142,12 @@
 	}
 	.content :global(pre) {
 		max-width: 100%;
+		white-space: pre-wrap;
 	}
+}
+.content :global(img) {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 	</style>
