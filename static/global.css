@@ -4,7 +4,7 @@ body {
 	font-size: 1rem;
 	line-height: 1.5;
 	color: #fff;
-	background-color: #202020;
+	background-color: #282828;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,4 +20,11 @@ h1 {
 a {
 	color: inherit;
 	padding: 0;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+	transition-property: border;
+	transition-duration: 300ms;
+}
+a:hover {
+	border-bottom: 1px solid #ff3e00;
 }

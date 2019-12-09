@@ -30,7 +30,7 @@
 		left: 0;
 		top: 0;
 		z-index: 20;
-		background-color: #282828;
+		background-color: #2c2c2c;
 	}
 	.nav-menu {
 		display: grid;
@@ -42,6 +42,8 @@
 		margin: 0 2em;
 		display: grid;
 		align-content: center;
+		justify-content: center;
+		text-align: center;
 	}
 	.nav-logo {
 		display: grid;
@@ -51,11 +53,18 @@
 	height: 2.5rem;
 	padding: 0;
 	margin: 0;
+	filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.0));
+	transition-property: filter;
+	transition-duration: 500ms;
+}
+.nav-logo img:hover {
+	filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.514));
 }
 
 	.selected {
 		display: block;
 		border-bottom: 1px solid #ff3e00;
+		/* border-bottom: 1px solid rgba(255, 118, 72, 0.514); */
 	}
 
 	a {

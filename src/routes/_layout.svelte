@@ -14,7 +14,7 @@
 
 <style>
 	main {
-		background-color: #202020;
+		background-color: #282828;
 		padding: 0 2rem;
 		margin: 7rem 0;
 		display: grid;

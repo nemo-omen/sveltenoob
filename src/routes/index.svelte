@@ -68,8 +68,8 @@
 		display: grid;
 		justify-content: stretch;
 		align-content: stretch;
-		/* border-radius: 5px; */
-		box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(0, 0, 0, 0);
+		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 		padding: 0;
 		overflow: hidden;
 		height: 20rem;
@@ -77,6 +77,12 @@
 		background-position: center top;
 		background-size: cover;
 		background-repeat: no-repeat;
+		transition-property: box-shadow, border;
+		transition-duration: 300ms, 500ms;
+	}
+	.blog-preview:hover {
+		box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+		border: 1px solid #fff;
 	}
 	.blog-preview-content {
 		background-color: rgba(0, 0, 0, 0.3);
