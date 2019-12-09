@@ -12,6 +12,7 @@
 		<p>Jeff promises not to call his time learning JavaScript and Svelte a 'journey.'</p>
 
 	</div>
+
 	<div class="about-profile">
 			<div class="profile-image">
 				<img src="images/derg.jpg" alt="Jeff Caldwell, SvelteNoob">
@@ -24,14 +25,30 @@
 </div>
 
 <style>
+
 	.about-content {
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		justify-content: stretch;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 6rem;
+	}
+	.about-info {
+		display: grid;
+		justify-content: start;
+		width: 100%;
 	}
 	.about-profile {
 		display: grid;
-		justify-content: center;
+		justify-content: end;
+		width: 100%
+	}
+	@media (max-width: 800px) {
+		.about-content {
+			grid-gap: 2rem;
+		}
+		.about-info, .about-profile {
+			justify-content: center;
+		}
 	}
 	.profile-image {
 		overflow: hidden;
