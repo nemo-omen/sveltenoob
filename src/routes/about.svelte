@@ -26,28 +26,35 @@
 
 <style>
 
+
+@media (min-width: 800px) {
 	.about-content {
 		display: grid;
-		justify-content: stretch;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		justify-content: space-between;
+		justify-self: center;
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 6rem;
+		max-width: 80%;
 	}
 	.about-info {
+		justify-self: start;
 		display: grid;
-		justify-content: start;
-		width: 100%;
+		justify-content: center;
 	}
 	.about-profile {
+		justify-self: end;
 		display: grid;
-		justify-content: end;
-		width: 100%
+		justify-content: center;
+	}
 	}
 	@media (max-width: 800px) {
 		.about-content {
-			grid-gap: 2rem;
+			width: 100%;
 		}
 		.about-info, .about-profile {
 			justify-content: center;
+			justify-self: center;
+			margin-bottom: 3rem;
 		}
 	}
 	.profile-image {
@@ -59,6 +66,7 @@
 		justify-content: center;
 		align-content: top;
 		margin-bottom: 2rem;
+		justify-self: center;
 	}
 	.profile-image img {
 		width: 100%;

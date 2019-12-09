@@ -19,6 +19,6 @@
 		margin: 7rem 0;
 		display: grid;
 		align-content: start;
-		justify-content: stretch;
+		/* justify-content: stretch; */
 	}
 </style>
