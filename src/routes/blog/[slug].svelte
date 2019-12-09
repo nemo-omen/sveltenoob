@@ -65,17 +65,15 @@
 	align-content: start;
 }
 .blog-header {
-
 	display: grid;
 	align-content: end;
 	justify-content: stretch;
 	text-align: start;
 	margin: 0;
-	height: 30vh;
+	height: 35vh;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
 }
 .blog-header h1 {
 	font-size: 2rem;
@@ -85,7 +83,6 @@
 }
 @media (min-width:800px) {
 	.content {
-		width: 80%;
 		padding: 1rem;
 	}
 }
@@ -94,7 +91,6 @@
 		height: 20vh;
 	}
 	.content {
-		width: 100%;
 		padding: 0;
 	}
 }
@@ -127,8 +123,11 @@
 		border-radius: 5px;
 		padding: 1rem;
 		white-space: pre-wrap;
-		max-width: 80%;
 		background-color: #2d2d2d;
+	}
+	.content :global(img) {
+		max-width: 100%;
+		height: auto;
 	}
 @media (max-width: 500px) {
 	.content :global(code) {
