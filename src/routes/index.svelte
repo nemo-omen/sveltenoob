@@ -34,33 +34,34 @@
 </svelte:head>
 
 
-<div class="blog-grid">
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<div class="blog-preview" style="background-image: url({post.thumbnail})">
-			<div class="img-preview">
-				<a rel='prefetch' href='blog/{post.slug}'><img src="{post.thumbnail}" alt="{post.slug}"></a>
+	<div class="blog-grid">
+		{#each posts as post}
+			<!-- we're using the non-standard `rel=prefetch` attribute to
+					tell Sapper to load the data for the page as soon as
+					the user hovers over the link or taps it, instead of
+					waiting for the 'click' event -->
+			<div class="blog-preview" style="background-image: url({post.thumbnail})">
+				<div class="img-preview">
+					<a rel='prefetch' href='blog/{post.slug}'><img src="{post.thumbnail}" alt="{post.slug}"></a>
+				</div>
+				<div class="blog-preview-content">
+					<article>
+						<a rel='prefetch' href='blog/{post.slug}'><h3>{post.title}</h3></a>
+					</article>
+					<footer>
+						<p>{post.description}</p>
+					</footer>
+				</div>
 			</div>
-			<div class="blog-preview-content">
-				<article>
-					<a rel='prefetch' href='blog/{post.slug}'><h3>{post.title}</h3></a>
-				</article>
-				<footer>
-					<p>{post.description}</p>
-				</footer>
-			</div>
-		</div>
-	{/each}
-</div>
+		{/each}
+	</div>
+
 
 <style>
+
 	.blog-grid {
 		display: grid;
-		width: 100%;
-		grid-template-columns: repeat(2, 1fr);
+		/* grid-template-columns: repeat(2, 1fr); */
 		grid-gap: 2rem;
 		justify-content: stretch;
 	}
@@ -72,9 +73,9 @@
 		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 		padding: 0;
 		overflow: hidden;
-		height: 20rem;
-		border-radius: 5px;
-		background-position: center top;
+		height: 25rem;
+		border-radius: 10px;
+		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		transition-property: box-shadow, border;
@@ -87,6 +88,7 @@
 	.blog-preview-content {
 		background-color: rgba(0, 0, 0, 0.3);
 		z-index: 10;
+		outline: none;
 	}
 
 	.blog-preview article {

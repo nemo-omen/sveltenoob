@@ -70,16 +70,18 @@
 	justify-content: stretch;
 	text-align: start;
 	margin: 0;
-	height: 35vh;
+	height: 30rem;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	border-radius: 10px;
 }
 .blog-header h1 {
 	font-size: 2rem;
 	margin: 0;
 	background-color: rgba(0, 0, 0, 0.3);
 	padding: 1rem;
+	border-radius: 0 0 10px 10px;
 }
 @media (min-width:800px) {
 	.content {
@@ -136,5 +138,8 @@
 	.content :global(pre) {
 		max-width: 100%;
 	}
+}
+.content :global(a) {
+	border-bottom: 1px solid #ff3e00;
 }
 	</style>

@@ -82,5 +82,3 @@ You can also, if you want to use components in these iterations (and you know yo
 ```
 
 And, of course, `export let lameMoves = [];` from inside `RealJabronis.svelte` will give you a nice array to work with.
-
-**What tips do you have for iterating through nested objects and arrays in Vanilla JS?**

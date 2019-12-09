@@ -17,7 +17,7 @@
 	.container {
 		width: 100%;
 		display: grid;
-		justify-content: center;
+		justify-content: stretch;
 		margin: 7rem 0;
 		padding: 0;
 	}
@@ -26,8 +26,8 @@
 		justify-self: center;
 		display: grid;
 		align-content: start;
+		justify-content: stretch;
 		width: 60%;
-		/* justify-content: stretch; */
 	}
 	@media (max-width: 800px) {
 		main {
