@@ -86,4 +86,15 @@
 		font-size: 1.5rem;
 		padding: 0.5rem;
 	}
+a {
+	color: inherit;
+	padding: 0;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+	transition-property: border;
+	transition-duration: 300ms;
+}
+	a:hover {
+	border-bottom: 1px solid #ff3e00;
+}
 </style>
