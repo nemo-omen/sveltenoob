@@ -69,7 +69,7 @@
 		display: grid;
 		justify-content: stretch;
 		align-content: stretch;
-		border: 1px solid rgba(0, 0, 0, 0);
+		border: 1px solid rgba(0, 0, 0, 0.3);
 		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 		padding: 0;
 		overflow: hidden;
@@ -80,6 +80,7 @@
 		background-repeat: no-repeat;
 		transition-property: box-shadow, border;
 		transition-duration: 300ms, 500ms;
+		box-sizing: border-box;
 	}
 	.blog-preview:hover {
 		box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);

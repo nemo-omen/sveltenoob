@@ -9,7 +9,7 @@
 
 		<p>Jeff works for a local television news station and uses Svelte to build tools for their streaming operation and their website.</p>
 
-		<p>Jeff promises not to call his time learning JavaScript and Svelte a 'journey.'</p>
+		<!-- <p>Jeff promises not to call his time learning JavaScript and Svelte a 'journey.'</p> -->
 
 	</div>
 
